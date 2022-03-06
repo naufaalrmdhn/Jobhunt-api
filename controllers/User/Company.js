@@ -1,4 +1,6 @@
-import Company from "../../models/company.js";
+import MyModels from "../../models/companyjobpost.js";
+const Company = MyModels.Company
+
 
 export const getCompanies = async(req, res) => {
     try {
