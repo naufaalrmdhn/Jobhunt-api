@@ -1,4 +1,4 @@
-import MyModels from "../../models/companyjobpost.js";
+import MyModels from "../models/companyjobpost.js";
 const Job = MyModels.Job
 const Company = MyModels.Company
 

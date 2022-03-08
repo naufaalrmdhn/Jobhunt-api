@@ -1,4 +1,4 @@
-import { Sequelize } from 'sequelize';
+import { QueryInterface, Sequelize } from 'sequelize';
 import conn from '../../config/connection.js';
 const { DataTypes } = Sequelize;
 
@@ -11,7 +11,12 @@ const Users = conn.define('users', {
     },
     password: {
         type: DataTypes.STRING
+    },
+    refresh_token: {
+        type: DataTypes.STRING
     }
 })
+
+
 
 export default Users;

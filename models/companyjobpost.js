@@ -28,11 +28,28 @@ const Job = conn.define('job_posts', {
     }
 })
 
-
+const JobPostActivity = conn.define('job_post_activities', {
+    userId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: Users,
+            key: 'id'
+        }
+    },
+    jobPostId: {
+        type: DataTypes.INTEGER,
+        references: {
+            model: 'job_posts',
+            key: 'id'
+        }
+    }
+})
 
 Job.belongsTo(Company)
-
+JobPostActivity.belongsTo(Users)
+JobPostActivity.belongsTo(Job)
 export default {
     Company,
-    Job
+    Job,
+    JobPostActivity
 }

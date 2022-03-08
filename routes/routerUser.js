@@ -3,7 +3,7 @@ import basicAuth from 'express-basic-auth';
 import Users from '../models/user/Users.js';
 const routerUser = express.Router();
 
-import { Register, Login, getUsers, getUserById, updateUserById, deleteUserById } from '../controllers/User/User.js';
+import { Register, Login, getUsers, getUserById, updateUserById, deleteUserById } from '../controllers/User.js';
 
 
 routerUser.post('/user/register', Register); //register user

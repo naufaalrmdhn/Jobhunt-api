@@ -1,7 +1,7 @@
 import express from 'express';
 const routerJob = express.Router();
 
-import { createJob, deleteJobPostById, getJobPostById, getJobs, updateJobPostById } from '../controllers/User/Job.js';
+import { createJob, deleteJobPostById, getJobPostById, getJobs, updateJobPostById } from '../controllers/Job.js';
 
 routerJob.post('/jobs', createJob);
 routerJob.get('/jobs', getJobs);
